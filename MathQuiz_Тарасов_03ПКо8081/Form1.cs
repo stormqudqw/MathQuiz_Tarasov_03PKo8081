@@ -125,6 +125,10 @@ namespace MathQuiz_Тарасов_03ПКо8081
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            if(timeLeft < 6)
+            {
+                timeLabel.BackColor = Color.Red;
+            }
             if (CheckTheAnswer())
             {
                 // If CheckTheAnswer() returns true, then the user 
