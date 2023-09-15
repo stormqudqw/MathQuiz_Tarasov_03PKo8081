@@ -83,7 +83,7 @@ namespace MathQuiz_Тарасов_03ПКо8081
 
             // Start the timer.
             timeLeft = 30;
-            timeLabel.Text = "30 seconds";
+            timeLabel.Text = "30 секунд";
             timer1.Start();
         }
         private bool CheckTheAnswer()
@@ -135,8 +135,8 @@ namespace MathQuiz_Тарасов_03ПКо8081
                 // got the answer right. Stop the timer  
                 // and show a MessageBox.
                 timer1.Stop();
-                MessageBox.Show("You got all the answers right!",
-                                "Congratulations!");
+                MessageBox.Show("Ты правильно ответил на все вопросы!",
+                                "Поздравляем!");
                 startButton.Enabled = true;
             }
             else if (timeLeft > 0)
@@ -146,15 +146,15 @@ namespace MathQuiz_Тарасов_03ПКо8081
                 // display the new time left by updating the 
                 // Time Left label.
                 timeLeft = timeLeft - 1;
-                timeLabel.Text = timeLeft + " seconds";
+                timeLabel.Text = timeLeft + " секунд";
             }
             else
             {
                 // If the user ran out of time, stop the timer, show
                 // a MessageBox, and fill in the answers.
                 timer1.Stop();
-                timeLabel.Text = "Time's up!";
-                MessageBox.Show("You didn't finish in time.", "Sorry!");
+                timeLabel.Text = "Время вышло!";
+                MessageBox.Show("Вы не закончили вовремя.", "Простите!");
                 sum.Value = addend1 + addend2;
                 difference.Value = minuend - subtrahend;
                 product.Value = multiplicand * multiplier;
